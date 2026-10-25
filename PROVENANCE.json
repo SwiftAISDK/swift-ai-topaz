@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "package": "swift-ai-topaz",
+  "version": "1.0.0",
+  "releaseID": "modular-3",
+  "source": {
+    "commit": "7fc9b4cd72f8f83b75ba7eee2e38d37127539317",
+    "baseCommit": "7fc9b4cd72f8f83b75ba7eee2e38d37127539317",
+    "workingTree": false,
+    "inputsSHA256": "49b802ba4a30454f78c9886ab3114537ef659ab3e6db7775479b7351f6e3f0ab"
+  },
+  "dependencies": [
+    {
+      "package": "swift-ai-core",
+      "from": "1.1.0"
+    }
+  ],
+  "changes": [
+    {
+      "id": "remaining-package-extraction",
+      "notes": "Extract the existing runtime, typed settings and standalone tests from the compatibility aggregate. Preserve the reviewed npm baseline and existing capability/gap boundaries.",
+      "compatibility": "Initial independent Swift package version. Existing SwiftAISDK entry points remain in the development compatibility facade; no npm-version equivalence is implied."
+    }
+  ],
+  "canonicalDirectory": "Packages/swift-ai-topaz",
+  "upstream": [
+    {
+      "name": "@ai-sdk/topaz",
+      "reviewedVersion": "3.0.15",
+      "ledgerKind": "provider",
+      "evidence": "`AIProviders.topaz`, `TopazImageModel`, `TopazVideoModel`, `TopazProviderTests.swift`",
+      "reviewStatus": "imported-reviewed-with-gaps",
+      "archiveIntegrity": "sha512-b7dGgr9PrnOjX4bnrEwGqXb8FI1R15Gk+Vdu+qtgT2lVkh7xqgF57QVHcUsCvatAkjqJbV6Tgc//pww8hgfuRQ==",
+      "sourceRef": "npm:@ai-sdk/topaz@3.0.15",
+      "testRef": "682e2dd71456f14f9da33a1b983d1998c3a1184c",
+      "testRefRelationship": "inventory-snapshot-not-release-verified",
+      "contractFamilies": [],
+      "contractReview": "not-imported; inspect upstream declarations before extraction"
+    }
+  ],
+  "note": "Independent port. Imported test refs and contract review gaps retain their original status; export is not new upstream parity proof.",
+  "canonicalInputs": [
+    {
+      "canonicalPath": ".github/workflows/package-check.yml",
+      "sha256": "7ff448e130f7aed96c38accdf828b6d993997ebc5317358347e9a70a649e67ca"
+    },
+    {
+      "canonicalPath": "LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-topaz/Package.swift",
+      "sha256": "c2fdf44d2a613eab9b5c7c60c3916bf5b9de95e8475b45c8c0f96be3b305cb09"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-topaz/Porting/map.json",
+      "sha256": "8d321a3bc4d09caff9ce1dee65a6f3842fe0370391f5b3bafb76b4684487825c"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-topaz/README.md",
+      "sha256": "a987f87319f48750f1ae90248eafd0885589fdc5362770055475f69daf93555e"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-topaz/Sources/SwiftAITopaz/TopazImageModel.swift",
+      "sha256": "2e80176a77ccaade9e7ec8e694eb770a59aaf3a49cb70b63eb68ef11e12b42f7"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-topaz/Sources/SwiftAITopaz/TopazProvider.swift",
+      "sha256": "5850344def2c707cbb8891800036a9c7f931f272168fee2643e59e5f7dce34f1"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-topaz/Sources/SwiftAITopaz/TopazShared.swift",
+      "sha256": "6d66c132b4fff6b850911822342f1542f2f757a67b64c2f0e4b82854f51151de"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-topaz/Sources/SwiftAITopaz/TopazVideoModel.swift",
+      "sha256": "32fdba2be3af80e19e6c5c4f4ea54c67cb4d5832d10ce9227c158cbe98bffe1f"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-topaz/Tests/SwiftAITopazTests/FixtureDownloadTransport.swift",
+      "sha256": "d734bb794f67c447a124dc95f17c3464405a2480917fe5323b5c7d43fa8c9056"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-topaz/Tests/SwiftAITopazTests/TestSupport.swift",
+      "sha256": "dce580d660389416a84daa3ddec99b41e4ab14a41e1ddfa224576ba7d1fc42e8"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-topaz/Tests/SwiftAITopazTests/TopazProviderTests.swift",
+      "sha256": "134640c3c2b5f31759f174e70765f792494e885b7036d076f98771b32006c34d"
+    }
+  ]
+}

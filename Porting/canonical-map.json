@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "package": "swift-ai-topaz",
+  "status": "coarse-import",
+  "upstream": [
+    {
+      "name": "@ai-sdk/topaz",
+      "implementation": [
+        "packages/topaz/src"
+      ],
+      "tests": [
+        "packages/topaz/src/lazy-schemas.test.ts",
+        "packages/topaz/src/topaz-image-model.test.ts",
+        "packages/topaz/src/topaz-provider.test.ts",
+        "packages/topaz/src/topaz-video-model.test.ts"
+      ]
+    }
+  ],
+  "swift": {
+    "sources": [
+      "Packages/swift-ai-topaz/Sources/SwiftAITopaz/TopazImageModel.swift",
+      "Packages/swift-ai-topaz/Sources/SwiftAITopaz/TopazProvider.swift",
+      "Packages/swift-ai-topaz/Sources/SwiftAITopaz/TopazShared.swift",
+      "Packages/swift-ai-topaz/Sources/SwiftAITopaz/TopazVideoModel.swift"
+    ],
+    "tests": [
+      "Packages/swift-ai-topaz/Tests/SwiftAITopazTests/FixtureDownloadTransport.swift",
+      "Packages/swift-ai-topaz/Tests/SwiftAITopazTests/TestSupport.swift",
+      "Packages/swift-ai-topaz/Tests/SwiftAITopazTests/TopazProviderTests.swift"
+    ],
+    "resources": []
+  },
+  "differences": [
+    {
+      "kind": "native-adaptation",
+      "reason": "Preserve Swift async/await, Sendable, Foundation transport and existing documented gaps; see Docs/CoreV6Parity.md and PortingStatus.md."
+    }
+  ],
+  "reviewNote": "M6: provider runtime, configuration and focused tests extracted. Existing upstream baseline, capability boundaries and gaps retained."
+}

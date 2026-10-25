@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "packages": [
+    {
+      "name": "@ai-sdk/topaz",
+      "reviewedVersion": "3.0.15",
+      "ledgerKind": "provider",
+      "evidence": "`AIProviders.topaz`, `TopazImageModel`, `TopazVideoModel`, `TopazProviderTests.swift`",
+      "reviewStatus": "imported-reviewed-with-gaps",
+      "archiveIntegrity": "sha512-b7dGgr9PrnOjX4bnrEwGqXb8FI1R15Gk+Vdu+qtgT2lVkh7xqgF57QVHcUsCvatAkjqJbV6Tgc//pww8hgfuRQ==",
+      "sourceRef": "npm:@ai-sdk/topaz@3.0.15",
+      "testRef": "682e2dd71456f14f9da33a1b983d1998c3a1184c",
+      "testRefRelationship": "inventory-snapshot-not-release-verified",
+      "contractFamilies": [],
+      "contractReview": "not-imported; inspect upstream declarations before extraction"
+    }
+  ]
+}
