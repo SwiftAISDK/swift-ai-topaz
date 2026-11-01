@@ -1,41 +1,44 @@
 {
   "schemaVersion": 1,
   "package": "swift-ai-topaz",
-  "version": "1.0.0",
-  "releaseID": "modular-3",
+  "version": "1.1.0",
+  "releaseID": "weekly-upstream-20261101",
   "source": {
-    "commit": "7fc9b4cd72f8f83b75ba7eee2e38d37127539317",
-    "baseCommit": "7fc9b4cd72f8f83b75ba7eee2e38d37127539317",
+    "commit": "ea057797494ab9bb66df8c6bfd8edc10245b20e7",
+    "baseCommit": "ea057797494ab9bb66df8c6bfd8edc10245b20e7",
     "workingTree": false,
-    "inputsSHA256": "49b802ba4a30454f78c9886ab3114537ef659ab3e6db7775479b7351f6e3f0ab"
+    "inputsSHA256": "b46f3e07b0a583d6fee81035987d74a06fc5c6109cbdf228144d1172d2c3676e"
   },
   "dependencies": [
     {
       "package": "swift-ai-core",
-      "from": "1.1.0"
+      "from": "1.2.0"
     }
   ],
   "changes": [
     {
-      "id": "remaining-package-extraction",
-      "notes": "Extract the existing runtime, typed settings and standalone tests from the compatibility aggregate. Preserve the reviewed npm baseline and existing capability/gap boundaries.",
-      "compatibility": "Initial independent Swift package version. Existing SwiftAISDK entry points remain in the development compatibility facade; no npm-version equivalence is implied."
+      "id": "weekly-upstream-20261101",
+      "notes": "Add native async throwing apiKeyProvider; resolve a fresh key immediately before every authenticated HTTP send/stream through the shared transport. Preserve static keys, custom header precedence, error/abort propagation, request builders and response parsers. Submit and each authenticated poll refresh credentials. Existing JSON accept headers and unauthenticated output download behavior are preserved. Reviewed upstream: @ai-sdk/topaz 3.0.15 to 3.0.19. Validation passed: node Scripts/test-packages.mjs (all 52 owning package suites and the compatibility facade); node Scripts/sdk.mjs generate --check; node --test Scripts/tests/*.test.cjs (27 passed); docs-site check and build (100 pages). Live provider calls were not run.",
+      "compatibility": "Minor release for additive native API; existing static settings and call sites remain compatible. Updated direct dependency minimums are recorded in the manifest. Existing documented JS/framework and native product gaps remain; version-delta review does not imply full parity or live-service testing. Explicit custom authentication skips an unused credential supplier, a deliberate native callback-order adaptation."
     }
   ],
   "canonicalDirectory": "Packages/swift-ai-topaz",
   "upstream": [
     {
       "name": "@ai-sdk/topaz",
-      "reviewedVersion": "3.0.15",
+      "reviewedVersion": "3.0.19",
       "ledgerKind": "provider",
-      "evidence": "`AIProviders.topaz`, `TopazImageModel`, `TopazVideoModel`, `TopazProviderTests.swift`",
+      "evidence": "`AIProviders.topaz`, `TopazImageModel`, `TopazVideoModel`, `TopazProviderTests.swift`; 2026-11-01 delta: Docs/WeeklyUpstreamAudit20261101.json",
       "reviewStatus": "imported-reviewed-with-gaps",
-      "archiveIntegrity": "sha512-b7dGgr9PrnOjX4bnrEwGqXb8FI1R15Gk+Vdu+qtgT2lVkh7xqgF57QVHcUsCvatAkjqJbV6Tgc//pww8hgfuRQ==",
-      "sourceRef": "npm:@ai-sdk/topaz@3.0.15",
-      "testRef": "682e2dd71456f14f9da33a1b983d1998c3a1184c",
-      "testRefRelationship": "inventory-snapshot-not-release-verified",
-      "contractFamilies": [],
-      "contractReview": "not-imported; inspect upstream declarations before extraction"
+      "archiveIntegrity": "sha512-G07WyicXL6VZmYYNGS2b5oqvkntPmwStHEzRZCriCZ0OZT/4r2g0Fct8cZMqg8vxY07DOIsjta1dB73vaF5FRw==",
+      "sourceRef": "npm:@ai-sdk/topaz@3.0.19",
+      "testRef": "9b603d36186b75e58d5479445a96c76f6e2d2700",
+      "testRefRelationship": "matching-release",
+      "contractFamilies": [
+        "ImageModelV4",
+        "ProviderV4"
+      ],
+      "contractReview": "2026-11-01: published declarations, source and exact matching-release changed tests reviewed; scoped dispositions and Swift translations are in Docs/WeeklyUpstreamAudit20261101.json. Existing broader product gaps remain; reviewed delta is not full-package parity."
     }
   ],
   "note": "Independent port. Imported test refs and contract review gaps retain their original status; export is not new upstream parity proof.",
@@ -54,7 +57,7 @@
     },
     {
       "canonicalPath": "Packages/swift-ai-topaz/Porting/map.json",
-      "sha256": "8d321a3bc4d09caff9ce1dee65a6f3842fe0370391f5b3bafb76b4684487825c"
+      "sha256": "f9014371af12507ca00bf1b3aeebbab6d0cfdcc53cc711ce685d585a5a03cd11"
     },
     {
       "canonicalPath": "Packages/swift-ai-topaz/README.md",
@@ -66,7 +69,7 @@
     },
     {
       "canonicalPath": "Packages/swift-ai-topaz/Sources/SwiftAITopaz/TopazProvider.swift",
-      "sha256": "5850344def2c707cbb8891800036a9c7f931f272168fee2643e59e5f7dce34f1"
+      "sha256": "feea5d695bf169b6f38363def607356910a5723b49cc1181197c5f85ea05fb88"
     },
     {
       "canonicalPath": "Packages/swift-ai-topaz/Sources/SwiftAITopaz/TopazShared.swift",
@@ -74,7 +77,7 @@
     },
     {
       "canonicalPath": "Packages/swift-ai-topaz/Sources/SwiftAITopaz/TopazVideoModel.swift",
-      "sha256": "32fdba2be3af80e19e6c5c4f4ea54c67cb4d5832d10ce9227c158cbe98bffe1f"
+      "sha256": "30dfc36aa6bc6ff90d963ca67c1ed7eb84d24f942cc5806c6adac02ff5021d1b"
     },
     {
       "canonicalPath": "Packages/swift-ai-topaz/Tests/SwiftAITopazTests/FixtureDownloadTransport.swift",
@@ -86,7 +89,11 @@
     },
     {
       "canonicalPath": "Packages/swift-ai-topaz/Tests/SwiftAITopazTests/TopazProviderTests.swift",
-      "sha256": "134640c3c2b5f31759f174e70765f792494e885b7036d076f98771b32006c34d"
+      "sha256": "67e10d151971229affa16dbea6d8fc7c05d01ac1d4ae7e5d4eaf16b55deca789"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-topaz/Tests/SwiftAITopazTests/Weekly20261101CredentialsTests.swift",
+      "sha256": "5054a118a3cb7117eec629e166ca22347b639e3042b627cee3b810310ec4d10f"
     }
   ]
 }
