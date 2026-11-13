@@ -3,20 +3,20 @@
   "packages": [
     {
       "name": "@ai-sdk/topaz",
-      "reviewedVersion": "3.0.23",
+      "reviewedVersion": "3.0.28",
       "ledgerKind": "provider",
-      "evidence": "`AIProviders.topaz`, `TopazImageModel`, `TopazVideoModel`, `TopazProviderTests.swift`; 2026-11-01 delta: Docs/WeeklyUpstreamAudit20261101.json; 2026-11-08 delta: Docs/WeeklyUpstreamAudit20261108.json",
+      "evidence": "`AIProviders.topaz`, `TopazImageModel`, `TopazVideoModel`, `TopazProviderTests.swift`; 2026-11-01 delta: Docs/WeeklyUpstreamAudit20261101.json; 2026-11-08 delta: Docs/WeeklyUpstreamAudit20261108.json; 2026-11-14 delta: Docs/WeeklyUpstreamAudit20261114.json",
       "reviewStatus": "imported-reviewed-with-gaps",
-      "archiveIntegrity": "sha512-yy/LIQEmAJAVxxXHQjrCSGlcevHlToZu1Hqvpa483y1syR1iW5bIZ0f4l2dUo56sN/zwUI2Rh2KI7jGXFbmYdw==",
-      "sourceRef": "npm:@ai-sdk/topaz@3.0.23",
-      "testRef": "0f3a85f92d1ce06ccde01d662407ef83e097a712",
+      "archiveIntegrity": "sha512-1CGCKo74SJwgzE6XaKEj18oV5QyY6b6ZuSAKnU5r4FaRSgj80+RqmS+HPUXVyOPuphz8IP6m2I3h49d9mhsZZg==",
+      "sourceRef": "npm:@ai-sdk/topaz@3.0.28",
+      "testRef": "8bc7652cdb13fc84722666eb93f45acd0d131eee",
       "testRefRelationship": "matching-release",
       "contractFamilies": [
         "ImageModelV4",
         "ProviderV4",
         "VideoModelV4"
       ],
-      "contractReview": "2026-11-08: published declarations/source and exact matching-release changed tests reviewed; native implementations, per-file dispositions and broader retained gaps are recorded in Docs/WeeklyUpstreamAudit20261108.json. Reviewed delta is not full-package or live-service parity."
+      "contractReview": "2026-11-14: verified published source/declarations and exact matching-release changed tests reviewed separately; native ports, per-file dispositions and retained gaps are recorded in Docs/WeeklyUpstreamAudit20261114.json. Delta review is not full-package or live-service parity."
     }
   ]
 }
