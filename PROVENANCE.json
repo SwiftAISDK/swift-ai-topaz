@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "package": "swift-ai-topaz",
-  "version": "1.2.0",
-  "releaseID": "upstream-parity-20261116",
+  "version": "1.2.1",
+  "releaseID": "weekly-upstream-20261122",
   "source": {
-    "commit": "1c457dea36be42376a6853aecd5c48ffc4942178",
-    "baseCommit": "1c457dea36be42376a6853aecd5c48ffc4942178",
+    "commit": "73e28c7d4106338c3030bc36700c5922aeb2ebd9",
+    "baseCommit": "73e28c7d4106338c3030bc36700c5922aeb2ebd9",
     "workingTree": false,
-    "inputsSHA256": "d7b8f52add7828d7e9ed20418fe072e7db03e75483a168bb7f5c34e9d2a04a13"
+    "inputsSHA256": "5b64cfae284ecf9a081f1c08d5b5dff83915b3c57b62669a3408e51a52961cb5"
   },
   "dependencies": [
     {
@@ -17,29 +17,29 @@
   ],
   "changes": [
     {
-      "id": "upstream-parity-20261116",
-      "notes": "Warning texts match upstream.",
-      "compatibility": "Source-compatible; changes are additive. Request bodies, results, warnings and errors change to match the reviewed upstream package."
+      "id": "weekly-upstream-20261122",
+      "notes": "Align the provider request identity with @ai-sdk/topaz 3.0.30 after comparing source, declarations and matching-release tests against 3.0.28. Offline validation passed: node Scripts/test-packages.mjs (56 packages, 3672 owning tests and 1760 compatibility tests), generation, tooling, isolation, and version selection. See Docs/Archive/WeeklyUpstreamAudit20261122.md for retained gaps. Paid provider calls were skipped.",
+      "compatibility": "Source-compatible request-header update."
     }
   ],
   "canonicalDirectory": "Packages/swift-ai-topaz",
   "upstream": [
     {
       "name": "@ai-sdk/topaz",
-      "reviewedVersion": "3.0.28",
+      "reviewedVersion": "3.0.30",
       "ledgerKind": "provider",
-      "evidence": "`AIProviders.topaz`, `TopazImageModel`, `TopazVideoModel`, `TopazProviderTests.swift`; 2026-11-01 delta: Docs/Archive/WeeklyUpstreamAudit20261101.json; 2026-11-08 delta: Docs/Archive/WeeklyUpstreamAudit20261108.json; 2026-11-14 delta: Docs/Archive/WeeklyUpstreamAudit20261114.json",
+      "evidence": "`AIProviders.topaz`, `TopazImageModel`, `TopazVideoModel`, `TopazProviderTests.swift`; 2026-11-01 delta: Docs/Archive/WeeklyUpstreamAudit20261101.json; 2026-11-08 delta: Docs/Archive/WeeklyUpstreamAudit20261108.json; 2026-11-14 delta: Docs/Archive/WeeklyUpstreamAudit20261114.json; 2026-11-22 delta: Docs/Archive/WeeklyUpstreamAudit20261122.json",
       "reviewStatus": "imported-reviewed-with-gaps",
-      "archiveIntegrity": "sha512-1CGCKo74SJwgzE6XaKEj18oV5QyY6b6ZuSAKnU5r4FaRSgj80+RqmS+HPUXVyOPuphz8IP6m2I3h49d9mhsZZg==",
-      "sourceRef": "npm:@ai-sdk/topaz@3.0.28",
-      "testRef": "8bc7652cdb13fc84722666eb93f45acd0d131eee",
+      "archiveIntegrity": "sha512-pFwAt6FuTvT8gniMxQN6fWZm7Yor50qdXCxYGR5S0I0AcN0NO/8Ge6J5xbsjxnIfc6nv4pQC1hWVxQGlg0Ptuw==",
+      "sourceRef": "npm:@ai-sdk/topaz@3.0.30",
+      "testRef": "3dad57f204c7332178d28c3467c7311875b66a3e",
       "testRefRelationship": "matching-release",
       "contractFamilies": [
         "ImageModelV4",
         "ProviderV4",
         "VideoModelV4"
       ],
-      "contractReview": "2026-11-14: verified published source/declarations and exact matching-release changed tests reviewed separately; native ports, per-file dispositions and retained gaps are recorded in Docs/Archive/WeeklyUpstreamAudit20261114.json. Delta review is not full-package or live-service parity."
+      "contractReview": "2026-11-22: reviewed the published source and declarations and the matching-release test diffs. Native evidence and explicitly retained coverage gaps are in Docs/Archive/WeeklyUpstreamAudit20261122.json."
     }
   ],
   "note": "Independent port. Imported test refs and contract review gaps retain their original status; export is not new upstream parity proof.",
@@ -70,7 +70,7 @@
     },
     {
       "canonicalPath": "Packages/swift-ai-topaz/Sources/SwiftAITopaz/TopazProvider.swift",
-      "sha256": "9c83fcc67256ce306ee39ade34bba44eda6fe459509093c07c75bd7ec06d78ee"
+      "sha256": "1e345605c125295d88a8a656c6d393624abf759a67c7d4de5df8a514cfc4d92c"
     },
     {
       "canonicalPath": "Packages/swift-ai-topaz/Sources/SwiftAITopaz/TopazShared.swift",
@@ -78,7 +78,7 @@
     },
     {
       "canonicalPath": "Packages/swift-ai-topaz/Sources/SwiftAITopaz/TopazVideoModel.swift",
-      "sha256": "7fca2cc417883d641936cffacac00f6a119b419e84c417b29b2c3a3885748ee8"
+      "sha256": "5f4ef0ec9a6d4cfd5d3175f255ad36b6e765c3367f7a2fdad2e8f6309b4a5284"
     },
     {
       "canonicalPath": "Packages/swift-ai-topaz/Tests/SwiftAITopazTests/FixtureDownloadTransport.swift",
@@ -90,7 +90,7 @@
     },
     {
       "canonicalPath": "Packages/swift-ai-topaz/Tests/SwiftAITopazTests/TopazProviderTests.swift",
-      "sha256": "1e9e6f077770bed183d7d74014615dba2d42408287e22f6e5ff2804b54ca8b95"
+      "sha256": "079e661fce1ab46f1ede98eed45389a1ebab07d8b2750bc2f63314c521a44451"
     },
     {
       "canonicalPath": "Packages/swift-ai-topaz/Tests/SwiftAITopazTests/Weekly20261101CredentialsTests.swift",
